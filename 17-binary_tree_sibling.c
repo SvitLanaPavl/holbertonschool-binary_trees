@@ -7,17 +7,9 @@
  */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	binary_tree_t *temp;
-
 	if (!node || !node->parent)
 		return (NULL);
-	if (node->left)
-		return (node->right);
-	if (node->right)
-		return (node->left);
-	temp = binary_tree_sibling(node->left);
-	if (temp)
-		return (temp);
-	temp = binary_tree_sibling(node->right);
-	return (temp);
+	if (node = node->parent->left)
+		return (node->parent->right);
+	return (node->parent->left);
 }
