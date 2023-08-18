@@ -18,6 +18,6 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	temp = binary_tree_sibling(node->left);
 	if (temp)
 		return (temp);
-	temp = binary_tree_sibling(node->right)
-	return (temp);;
+	temp = binary_tree_sibling(node->right);
+	return (temp);
 }
